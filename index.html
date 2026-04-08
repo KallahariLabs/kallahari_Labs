@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kallahari Labs | Confiança, Presença e Garantia</title>
+    <title>Kallahari Labs | Confiança, Presença, Garantia</title>
     <meta
       name="description"
       content="Kallahari Labs: confiança, procedência, autenticidade e atendimento direto pelos canais oficiais."
@@ -39,17 +39,16 @@
               steel: "#b8becb",
               steelDeep: "#8e95a3",
               neon: "#D4FF00",
-              gold: "#d8a85a",
             },
             fontFamily: {
               display: ['"Arial Black"', "Impact", "Haettenschweiler", "sans-serif"],
-              brand: ['Montserrat', "Inter", "system-ui", "sans-serif"],
+              brand: ["Montserrat", "Inter", "system-ui", "sans-serif"],
               body: ["Inter", "system-ui", "sans-serif"],
             },
             letterSpacing: {
               elite: "0.12em",
               doctrine: "0.20em",
-              brandwide: "0.18em",
+              brandwide: "0.14em",
             },
             boxShadow: {
               panel: "0 20px 60px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255,255,255,0.06)",
@@ -73,7 +72,7 @@
     <header class="fixed inset-x-0 top-0 z-50 border-b border-line/80 bg-base/85 backdrop-blur-xl">
       <div class="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-4 md:px-8 md:py-5">
         <a href="#home" class="inline-flex items-center" aria-label="Kallahari Labs">
-          <span class="font-brand text-lg font-bold uppercase tracking-brandwide text-white sm:text-xl md:text-2xl">
+          <span class="font-brand text-base font-bold uppercase tracking-brandwide text-white sm:text-lg md:text-2xl">
             KALLAHARI LABS
           </span>
         </a>
@@ -123,31 +122,32 @@
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,255,0,0.08),transparent_42%)]"></div>
         <div class="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(255,255,255,0.03),transparent_15%,transparent_85%,rgba(255,255,255,0.02))]"></div>
 
-        <div class="relative mx-auto mt-28 grid w-full max-w-7xl items-center gap-10 px-4 py-20 md:mt-20 md:grid-cols-[1.05fr_0.95fr] md:px-8 md:py-28">
-          <div class="order-2 md:order-1">
+        <div class="relative mx-auto mt-24 grid w-full max-w-7xl items-center gap-8 px-4 py-16 md:mt-20 md:grid-cols-[1.05fr_0.95fr] md:gap-10 md:px-8 md:py-28">
+          <!-- TEXTO PRIMEIRO NO MOBILE -->
+          <div class="order-1 text-center md:order-1 md:text-left">
             <p class="inline-flex items-center gap-2 rounded-full border border-neon/35 bg-zinc-900/70 px-4 py-1.5 text-[10px] font-bold uppercase tracking-doctrine text-neon sm:text-xs">
               <span class="h-1.5 w-1.5 rounded-full bg-neon"></span>
               PROCEDÊNCIA · AUTENTICIDADE · ATENDIMENTO DIRETO
             </p>
 
-            <h1 class="mt-7 max-w-5xl font-display text-5xl leading-[0.9] text-white sm:text-6xl md:text-7xl lg:text-8xl">
+            <h1 class="mt-6 font-display text-4xl leading-[0.92] text-white sm:text-5xl md:mt-7 md:max-w-5xl md:text-7xl lg:text-8xl">
               <span>CONFIANÇA,</span><br />
               <span>PRESENÇA,</span><br />
               <span class="bg-steel bg-clip-text text-transparent">GARANTIA.</span>
             </h1>
 
-            <p class="mt-8 max-w-2xl text-base leading-relaxed text-zinc-300 sm:text-lg">
+            <p class="mx-auto mt-6 max-w-xl text-sm leading-relaxed text-zinc-300 sm:text-base md:mx-0 md:mt-8 md:max-w-2xl md:text-lg">
               Mais de 14 anos de operação consolidada, atendimento reservado e atuação em diferentes estados mediante consulta.
               Uma estrutura construída sobre autenticidade, procedência e compromisso com qualidade.
             </p>
 
-            <div class="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
+            <div class="mt-8 flex flex-col gap-3 sm:mt-10 sm:gap-4 md:flex-row md:items-center">
               <a
                 data-link="telegramVip"
                 href="https://t.me/seu_canal"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="group inline-flex items-center justify-center gap-2 rounded-lg border border-neon/80 bg-neon px-8 py-4 text-sm font-black tracking-elite text-black shadow-neonSoft transition duration-300 hover:-translate-y-0.5 hover:brightness-95"
+                class="group inline-flex w-full items-center justify-center gap-2 rounded-lg border border-neon/80 bg-neon px-6 py-4 text-sm font-black tracking-elite text-black shadow-neonSoft transition duration-300 hover:-translate-y-0.5 hover:brightness-95 md:w-auto md:px-8"
               >
                 CONSULTAR VIA TELEGRAM
                 <i data-lucide="arrow-up-right" class="h-4 w-4 transition group-hover:translate-x-0.5"></i>
@@ -158,23 +158,24 @@
                 href="https://wa.me/5500000000000?text=Quero%20mais%20informacoes%20sobre%20a%20Kallahari%20Labs"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="inline-flex items-center justify-center gap-2 rounded-lg border border-line bg-panel px-6 py-4 text-sm font-bold tracking-wide text-white transition duration-300 hover:border-neon hover:text-neon"
+                class="inline-flex w-full items-center justify-center gap-2 rounded-lg border border-line bg-panel px-6 py-4 text-sm font-bold tracking-wide text-white transition duration-300 hover:border-neon hover:text-neon md:w-auto"
               >
                 FALAR NO WHATSAPP
                 <i data-lucide="message-circle" class="h-4 w-4"></i>
               </a>
             </div>
 
-            <p class="mt-5 text-xs uppercase tracking-[0.18em] text-zinc-400">
+            <p class="mt-4 text-center text-[11px] uppercase tracking-[0.18em] text-zinc-400 md:mt-5 md:text-left">
               Atendimento direto · preços conforme cotação · canais oficiais
             </p>
           </div>
 
-          <div class="order-1 flex justify-center md:order-2">
+          <!-- IMAGEM DEPOIS NO MOBILE -->
+          <div class="order-2 flex justify-center md:order-2">
             <img
               src="./kallahari-hero.png"
               alt="Imagem principal Kallahari Labs"
-              class="max-h-[82vh] w-auto object-contain drop-shadow-[0_0_40px_rgba(0,0,0,0.65)]"
+              class="max-h-[46vh] w-auto object-contain drop-shadow-[0_0_40px_rgba(0,0,0,0.65)] sm:max-h-[52vh] md:max-h-[82vh]"
             />
           </div>
         </div>
@@ -183,18 +184,18 @@
       <!-- =========================
            A DOUTRINA
            ========================= -->
-      <section id="doutrina" class="border-y border-line bg-baseSoft py-20 md:py-24">
+      <section id="doutrina" class="border-y border-line bg-baseSoft py-16 md:py-24">
         <div class="mx-auto w-full max-w-7xl px-4 md:px-8">
-          <div class="grid gap-12 md:grid-cols-12">
+          <div class="grid gap-10 md:grid-cols-12 md:gap-12">
             <div class="md:col-span-4">
               <p class="text-xs font-semibold uppercase tracking-doctrine text-neon">A Doutrina</p>
-              <h2 class="mt-4 font-display text-4xl leading-tight text-white md:text-5xl">
+              <h2 class="mt-4 font-display text-3xl leading-tight text-white sm:text-4xl md:text-5xl">
                 Confiança se sustenta com procedência.
               </h2>
             </div>
 
             <div class="md:col-span-8">
-              <p class="text-lg leading-relaxed text-zinc-200 md:text-xl">
+              <p class="text-base leading-relaxed text-zinc-200 sm:text-lg md:text-xl">
                 A Kallahari Labs construiu sua presença com base em consistência, seriedade e atendimento reservado.<br /><br />
                 Nossa operação foi consolidada ao longo de mais de 14 anos, com atuação em diferentes estados, foco em autenticidade
                 e compromisso com padrão de qualidade.<br /><br />
@@ -231,11 +232,11 @@
       <!-- =========================
            CREDIBILIDADE
            ========================= -->
-      <section id="credibilidade" class="py-20 md:py-24">
+      <section id="credibilidade" class="py-16 md:py-24">
         <div class="mx-auto w-full max-w-7xl px-4 md:px-8">
           <div class="mb-10 md:mb-14">
             <p class="text-xs font-semibold uppercase tracking-doctrine text-neon">Credibilidade</p>
-            <h2 class="mt-4 font-display text-4xl text-white md:text-5xl">
+            <h2 class="mt-4 font-display text-3xl text-white sm:text-4xl md:text-5xl">
               Estrutura consolidada. Consulta direta. Comunicação clara.
             </h2>
             <p class="mt-4 max-w-3xl text-sm leading-relaxed text-zinc-400 md:text-base">
@@ -243,8 +244,8 @@
             </p>
           </div>
 
-          <div class="grid gap-6 md:grid-cols-3">
-            <article class="relative overflow-hidden rounded-2xl border border-line bg-panel p-6 shadow-panel">
+          <div class="grid gap-4 md:grid-cols-3 md:gap-6">
+            <article class="relative overflow-hidden rounded-2xl border border-line bg-panel p-5 shadow-panel md:p-6">
               <p class="text-[11px] uppercase tracking-[0.18em] text-steelDeep">trajetória</p>
               <h3 class="mt-3 text-2xl font-bold text-white">Mais de 14 anos</h3>
               <p class="mt-4 text-sm leading-relaxed text-zinc-300">
@@ -252,7 +253,7 @@
               </p>
             </article>
 
-            <article class="relative overflow-hidden rounded-2xl border border-line bg-panel p-6 shadow-panel">
+            <article class="relative overflow-hidden rounded-2xl border border-line bg-panel p-5 shadow-panel md:p-6">
               <p class="text-[11px] uppercase tracking-[0.18em] text-steelDeep">consulta por região</p>
               <h3 class="mt-3 text-2xl font-bold text-white">Vários estados</h3>
               <p class="mt-4 text-sm leading-relaxed text-zinc-300">
@@ -260,7 +261,7 @@
               </p>
             </article>
 
-            <article class="relative overflow-hidden rounded-2xl border border-line bg-panel p-6 shadow-panel">
+            <article class="relative overflow-hidden rounded-2xl border border-line bg-panel p-5 shadow-panel md:p-6">
               <p class="text-[11px] uppercase tracking-[0.18em] text-steelDeep">mercado</p>
               <h3 class="mt-3 text-2xl font-bold text-white">Cotação atualizada</h3>
               <p class="mt-4 text-sm leading-relaxed text-zinc-300">
@@ -274,11 +275,11 @@
       <!-- =========================
            BLOCOS DE CONFIANÇA
            ========================= -->
-      <section class="border-t border-line bg-baseSoft py-20 md:py-24">
+      <section class="border-t border-line bg-baseSoft py-16 md:py-24">
         <div class="mx-auto w-full max-w-7xl px-4 md:px-8">
           <div class="max-w-3xl">
             <p class="text-xs font-semibold uppercase tracking-doctrine text-neon">Confiança Kallahari</p>
-            <h2 class="mt-4 font-display text-4xl leading-tight text-white md:text-5xl">
+            <h2 class="mt-4 font-display text-3xl leading-tight text-white sm:text-4xl md:text-5xl">
               Segurança, procedência e atendimento direto.
             </h2>
             <p class="mt-5 text-base leading-relaxed text-zinc-300 md:text-lg">
@@ -286,7 +287,7 @@
             </p>
           </div>
 
-          <div class="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3 md:mt-10">
             <div class="rounded-lg border border-line bg-panel/70 px-4 py-4 text-sm font-medium text-zinc-200">
               OPERAÇÃO CONSOLIDADA HÁ MAIS DE 14 ANOS.
             </div>
@@ -327,7 +328,7 @@
             <img
               src="./logomarca.png"
               alt="Kallahari Labs"
-              class="h-24 w-auto object-contain opacity-95 sm:h-28 md:h-32"
+              class="h-16 w-auto object-contain opacity-95 sm:h-20 md:h-32"
             />
           </div>
 
