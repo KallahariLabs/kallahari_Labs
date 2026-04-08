@@ -1,363 +1,314 @@
- (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
-diff --git a/index.html b/index.html
-new file mode 100644
-index 0000000000000000000000000000000000000000..7bd884708eab5fe4f34573c1920c2d7a09797c8e
---- /dev/null
-+++ b/index.html
-@@ -0,0 +1,353 @@
-+<!doctype html>
-+<html lang="pt-BR" class="scroll-smooth">
-+  <head>
-+    <meta charset="UTF-8" />
-+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-+    <title>KALLAHARI LABS | Postura. Presença. Assinatura.</title>
-+    <meta
-+      name="description"
-+      content="Landing premium da KALLAHARI LABS com identidade dark luxury e atendimento oficial via Telegram e WhatsApp."
-+    />
-+
-+    <!-- Tailwind CSS via CDN -->
-+    <script src="https://cdn.tailwindcss.com"></script>
-+
-+    <!-- ==================================================
-+         BLOCO DE CONFIGURAÇÃO (edite aqui manualmente)
-+         - whatsappMain
-+         - whatsappConsultoria
-+         - telegramVip
-+         - heroImage
-+         - logoImage
-+         ================================================== -->
-+    <script>
-+      window.KALLAHARI_CONFIG = {
-+        whatsappMain: 'https://wa.me/5500000000000?text=Quero%20falar%20com%20a%20Kallahari%20Labs',
-+        whatsappConsultoria: 'https://wa.me/5500000000000?text=Quero%20consultoria%20com%20a%20Kallahari%20Labs',
-+        telegramVip: 'https://t.me/seu_canal',
-+        heroImage:
-+          'https://images.unsplash.com/photo-1517963879433-6ad2b056d712?auto=format&fit=crop&w=2200&q=80',
-+        logoImage: 'logo-kallahari-oficial.svg',
-+      };
-+    </script>
-+
-+    <!-- Tema Tailwind -->
-+    <script>
-+      tailwind.config = {
-+        theme: {
-+          extend: {
-+            colors: {
-+              base: '#050505',
-+              baseSoft: '#0b0b0c',
-+              panel: '#111216',
-+              line: '#262a31',
-+              steel: '#b8bfcb',
-+              steelDeep: '#8992a3',
-+              textsoft: '#d9dde5',
-+              neon: '#D4FF00',
-+            },
-+            fontFamily: {
-+              display: ['Impact', 'Arial Black', 'sans-serif'],
-+              body: ['Inter', 'system-ui', 'sans-serif'],
-+            },
-+            letterSpacing: {
-+              elite: '0.09em',
-+              micro: '0.16em',
-+            },
-+            boxShadow: {
-+              panel: '0 22px 56px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.04)',
-+              neonSoft: '0 0 0 1px rgba(212,255,0,.38), 0 0 22px rgba(212,255,0,.15)',
-+            },
-+            backgroundImage: {
-+              steel: 'linear-gradient(118deg,#f4f6fb 0%,#c5ccd8 45%,#7f8898 100%)',
-+            },
-+          },
-+        },
-+      };
-+    </script>
-+
-+    <!-- Lucide Icons via CDN -->
-+    <script src="https://unpkg.com/lucide@latest"></script>
-+  </head>
-+
-+  <body class="bg-base font-body text-textsoft antialiased">
-+    <!-- ========================= HEADER ========================= -->
-+    <header class="fixed inset-x-0 top-0 z-50 border-b border-line/80 bg-base/90 backdrop-blur-xl">
-+      <div class="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-4 md:px-8">
-+        <a href="#home" class="inline-flex items-center gap-3" aria-label="KALLAHARI LABS">
-+          <img data-logo src="logo-kallahari-oficial.svg" alt="Logo oficial Kallahari Labs" class="h-10 w-10 rounded-full object-cover ring-1 ring-[#c9ad7a]/50" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden')" />
-+          <span class="hidden h-10 w-10 items-center justify-center rounded-full border border-[#c9ad7a]/50 text-xs font-bold tracking-[0.2em] text-[#c9ad7a]">KL</span>
-+          <span class="font-display text-xl tracking-[0.14em] text-white sm:text-2xl">KALLAHARI LABS</span>
-+        </a>
-+
-+        <nav class="hidden items-center gap-7 text-sm md:flex">
-+          <a href="#doutrina" class="text-steel transition hover:text-white">A Doutrina</a>
-+          <a href="#protocolos" class="text-steel transition hover:text-white">Protocolos</a>
-+          <a href="#codigo" class="text-steel transition hover:text-white">Código</a>
-+          <a href="#footer" class="text-steel transition hover:text-white">Canal VIP</a>
-+          <a
-+            data-link="telegramVip"
-+            href="https://t.me/seu_canal"
-+            target="_blank"
-+            rel="noopener noreferrer"
-+            class="rounded-full border border-line bg-panel px-4 py-2 font-semibold text-white transition hover:border-neon hover:text-neon"
-+            >Canal VIP</a
-+          >
-+        </nav>
-+
-+        <details class="md:hidden">
-+          <summary class="list-none rounded-md border border-line bg-panel p-2 text-steel">
-+            <i data-lucide="menu" class="h-5 w-5"></i>
-+          </summary>
-+          <div class="absolute right-4 top-16 w-56 rounded-xl border border-line bg-baseSoft p-3 shadow-panel">
-+            <a href="#doutrina" class="block rounded-md px-3 py-2 text-sm hover:bg-zinc-900">A Doutrina</a>
-+            <a href="#protocolos" class="mt-1 block rounded-md px-3 py-2 text-sm hover:bg-zinc-900">Protocolos</a>
-+            <a href="#codigo" class="mt-1 block rounded-md px-3 py-2 text-sm hover:bg-zinc-900">Código</a>
-+            <a href="#footer" class="mt-1 block rounded-md px-3 py-2 text-sm hover:bg-zinc-900">Canal VIP</a>
-+            <a
-+              data-link="telegramVip"
-+              href="https://t.me/seu_canal"
-+              target="_blank"
-+              rel="noopener noreferrer"
-+              class="mt-2 block rounded-md border border-neon/45 px-3 py-2 text-center text-xs font-bold tracking-wide text-neon"
-+              >ENTRAR NO CANAL VIP</a
-+            >
-+          </div>
-+        </details>
-+      </div>
-+    </header>
-+
-+    <main>
-+      <!-- ========================= HERO ========================= -->
-+      <section
-+        id="home"
-+        data-hero
-+        class="relative flex min-h-screen items-center overflow-hidden"
-+        style="background-image:linear-gradient(108deg,rgba(5,5,5,.97) 14%,rgba(5,5,5,.72) 56%,rgba(5,5,5,.94) 100%), radial-gradient(circle at 78% 24%,rgba(212,255,0,.13),transparent 36%), url('https://images.unsplash.com/photo-1517963879433-6ad2b056d712?auto=format&fit=crop&w=2200&q=80'); background-size:cover; background-position:center;"
-+      >
-+        <div class="mx-auto mt-20 w-full max-w-7xl px-4 py-20 md:mt-14 md:px-8 md:py-28">
-+          <p class="inline-flex items-center rounded-full border border-neon/35 bg-black/45 px-4 py-1.5 text-[11px] font-bold uppercase tracking-micro text-neon">
-+            EU SEI O QUE VOCÊ PROCURA.
-+          </p>
-+
-+          <h1 class="mt-6 max-w-5xl font-display text-5xl leading-[.9] text-white sm:text-6xl md:text-7xl lg:text-8xl">
-+            SUA EVOLUÇÃO ESTÁ<br />
-+            <span class="bg-steel bg-clip-text text-transparent">EM MINHAS MÃOS.</span>
-+          </h1>
-+
-+          <p class="mt-7 max-w-3xl text-base leading-relaxed text-zinc-300 sm:text-lg">
-+            Kallahari Labs foi feita para quem não aceita o comum. Presença, postura e assinatura em uma identidade criada para quem exige nível.
-+          </p>
-+
-+          <div class="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
-+            <a
-+              data-link="telegramVip"
-+              href="https://t.me/seu_canal"
-+              target="_blank"
-+              rel="noopener noreferrer"
-+              class="inline-flex items-center justify-center gap-2 rounded-lg border border-neon/80 bg-neon px-7 py-4 text-sm font-black tracking-elite text-black shadow-neonSoft transition hover:-translate-y-0.5 hover:brightness-95"
-+            >
-+              ENTRAR NO CANAL VIP
-+              <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
-+            </a>
-+            <a
-+              data-link="whatsappMain"
-+              href="https://wa.me/5500000000000?text=Quero%20reservar%20na%20Kallahari%20Labs"
-+              target="_blank"
-+              rel="noopener noreferrer"
-+              class="inline-flex items-center justify-center gap-2 rounded-lg border border-line bg-panel px-7 py-4 text-sm font-bold tracking-wide text-white transition hover:border-neon hover:text-neon"
-+            >
-+              FALAR NO WHATSAPP
-+              <i data-lucide="message-circle" class="h-4 w-4"></i>
-+            </a>
-+            <span class="text-xs uppercase tracking-[0.18em] text-zinc-400">De Goiânia para o topo.</span>
-+          </div>
-+
-+          <p class="mt-4 text-xs uppercase tracking-[0.14em] text-zinc-500">
-+            Acesso pelos canais oficiais. Atendimento e disponibilidade via Telegram e WhatsApp.
-+          </p>
-+        </div>
-+      </section>
-+
-+      <!-- ========================= A DOUTRINA ========================= -->
-+      <section id="doutrina" class="border-y border-line bg-baseSoft py-20 md:py-24">
-+        <div class="mx-auto w-full max-w-7xl px-4 md:px-8">
-+          <p class="text-xs font-semibold uppercase tracking-micro text-neon">A DOUTRINA</p>
-+          <h2 class="mt-4 max-w-5xl font-display text-4xl leading-tight text-white md:text-6xl">A MARCA CARREGA O PESO DE QUEM SABE O QUE FAZ.</h2>
-+
-+          <div class="mt-7 max-w-4xl space-y-4 text-zinc-300 md:text-lg">
-+            <p>Kallahari Labs não nasceu para seguir tendência. Nasceu para sustentar uma identidade.</p>
-+            <p>Aqui, a postura vem antes da explicação. O nome vem antes do ruído. A assinatura vem antes do excesso.</p>
-+            <p>Tudo foi pensado para quem reconhece presença, valoriza código e não aceita entrar no jogo do comum.</p>
-+          </div>
-+
-+          <div class="mt-10 grid gap-4 md:grid-cols-3">
-+            <article class="rounded-2xl border border-line bg-panel p-6 shadow-panel">
-+              <p class="text-[11px] uppercase tracking-micro text-neon">POSTURA</p>
-+              <p class="mt-3 text-sm text-zinc-200">Quem conhece o peso reconhece a postura.</p>
-+            </article>
-+            <article class="rounded-2xl border border-line bg-panel p-6 shadow-panel">
-+              <p class="text-[11px] uppercase tracking-micro text-neon">ASSINATURA</p>
-+              <p class="mt-3 text-sm text-zinc-200">Você veio pelo nome. Fica pelo código.</p>
-+            </article>
-+            <article class="rounded-2xl border border-line bg-panel p-6 shadow-panel">
-+              <p class="text-[11px] uppercase tracking-micro text-neon">NÍVEL</p>
-+              <p class="mt-3 text-sm text-zinc-200">O comum não foi feito pra você.</p>
-+            </article>
-+          </div>
-+        </div>
-+      </section>
-+
-+      <!-- ========================= PROTOCOLOS ========================= -->
-+      <section id="protocolos" class="py-20 md:py-24">
-+        <div class="mx-auto w-full max-w-7xl px-4 md:px-8">
-+          <p class="text-xs font-semibold uppercase tracking-micro text-neon">PROTOCOLOS</p>
-+          <h2 class="mt-4 max-w-5xl font-display text-4xl leading-tight text-white md:text-6xl">SELEÇÃO DE ELITE PARA QUEM SABE O QUE QUER.</h2>
-+          <p class="mt-6 max-w-4xl text-zinc-300 md:text-lg">Cada linha da Kallahari Labs carrega presença forte, identidade própria e visão acima da média.</p>
-+
-+          <div class="mt-10 grid gap-6 md:grid-cols-3">
-+            <article class="rounded-2xl border border-line bg-panel p-6 shadow-panel transition hover:-translate-y-1 hover:border-steelDeep">
-+              <h3 class="text-2xl font-bold text-white">ANABOL DE ELITE</h3>
-+              <p class="mt-4 text-sm leading-relaxed text-zinc-300">Linha central da assinatura Kallahari. Presença forte, identidade premium e posicionamento para quem exige uma marca que fale antes da embalagem.</p>
-+              <a
-+                data-link="whatsappMain"
-+                href="https://wa.me/5500000000000?text=Quero%20reservar%20na%20Kallahari%20Labs"
-+                target="_blank"
-+                rel="noopener noreferrer"
-+                class="mt-7 inline-flex items-center gap-2 rounded-md border border-neon/55 px-4 py-2.5 text-sm font-bold tracking-wide text-neon transition hover:bg-neon hover:text-black"
-+                >RESERVAR NO WHATSAPP <i data-lucide="arrow-up-right" class="h-4 w-4"></i
-+              ></a>
-+            </article>
-+
-+            <article class="rounded-2xl border border-line bg-panel p-6 shadow-panel transition hover:-translate-y-1 hover:border-steelDeep">
-+              <h3 class="text-2xl font-bold text-white">PROTOCOLO DE GANHO SECO</h3>
-+              <p class="mt-4 text-sm leading-relaxed text-zinc-300">Estrutura pensada para quem procura densidade, disciplina e uma comunicação alinhada ao universo da alta performance.</p>
-+              <a
-+                data-link="whatsappMain"
-+                href="https://wa.me/5500000000000?text=Quero%20reservar%20na%20Kallahari%20Labs"
-+                target="_blank"
-+                rel="noopener noreferrer"
-+                class="mt-7 inline-flex items-center gap-2 rounded-md border border-neon/55 px-4 py-2.5 text-sm font-bold tracking-wide text-neon transition hover:bg-neon hover:text-black"
-+                >RESERVAR NO WHATSAPP <i data-lucide="arrow-up-right" class="h-4 w-4"></i
-+              ></a>
-+            </article>
-+
-+            <article class="rounded-2xl border border-line bg-panel p-6 shadow-panel transition hover:-translate-y-1 hover:border-steelDeep">
-+              <h3 class="text-2xl font-bold text-white">RECUPERAÇÃO ELITE</h3>
-+              <p class="mt-4 text-sm leading-relaxed text-zinc-300">Uma linha voltada para quem entende que constância, leitura de rotina e presença caminham juntas no mais alto nível.</p>
-+              <a
-+                data-link="whatsappMain"
-+                href="https://wa.me/5500000000000?text=Quero%20reservar%20na%20Kallahari%20Labs"
-+                target="_blank"
-+                rel="noopener noreferrer"
-+                class="mt-7 inline-flex items-center gap-2 rounded-md border border-neon/55 px-4 py-2.5 text-sm font-bold tracking-wide text-neon transition hover:bg-neon hover:text-black"
-+                >RESERVAR NO WHATSAPP <i data-lucide="arrow-up-right" class="h-4 w-4"></i
-+              ></a>
-+            </article>
-+          </div>
-+
-+          <p class="mt-6 text-xs uppercase tracking-[0.14em] text-zinc-500">Canal direto. Comunicação reservada.</p>
-+        </div>
-+      </section>
-+
-+      <!-- ========================= CÓDIGO ========================= -->
-+      <section id="codigo" class="border-y border-line bg-baseSoft py-20 md:py-24">
-+        <div class="mx-auto w-full max-w-7xl px-4 md:px-8">
-+          <p class="text-xs font-semibold uppercase tracking-micro text-neon">CÓDIGO KALLAHARI</p>
-+          <h2 class="mt-4 max-w-5xl font-display text-4xl leading-tight text-white md:text-6xl">EU SEI O QUE VOCÊ QUER.</h2>
-+          <p class="mt-6 max-w-4xl text-zinc-300 md:text-lg">Não é sobre falar com todo mundo. Nunca foi. É sobre ser reconhecido por quem entende presença, postura e assinatura.</p>
-+
-+          <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-+            <div class="rounded-xl border border-line bg-panel px-4 py-3 text-sm text-steel">SUA EVOLUÇÃO ESTÁ EM MINHAS MÃOS.</div>
-+            <div class="rounded-xl border border-line bg-panel px-4 py-3 text-sm text-steel">EU SEI O QUE VOCÊ PROCURA.</div>
-+            <div class="rounded-xl border border-line bg-panel px-4 py-3 text-sm text-steel">VOCÊ NÃO CHEGOU AQUI POR ACASO.</div>
-+            <div class="rounded-xl border border-line bg-panel px-4 py-3 text-sm text-steel">VOCÊ VEIO PELO NOME. FICA PELO CÓDIGO.</div>
-+            <div class="rounded-xl border border-line bg-panel px-4 py-3 text-sm text-steel">NÃO É PRA TODO MUNDO. NUNCA FOI.</div>
-+            <div class="rounded-xl border border-line bg-panel px-4 py-3 text-sm text-steel">DE GOIÂNIA PARA O TOPO.</div>
-+            <div class="rounded-xl border border-line bg-panel px-4 py-3 text-sm text-steel">KALLAHARI É POSTURA.</div>
-+            <div class="rounded-xl border border-line bg-panel px-4 py-3 text-sm text-steel">LA MAFIA É CÓDIGO.</div>
-+            <div class="rounded-xl border border-line bg-panel px-4 py-3 text-sm text-steel">ASSINATURA PRÓPRIA. POSTURA PRÓPRIA. CÓDIGO PRÓPRIO.</div>
-+            <div class="rounded-xl border border-line bg-panel px-4 py-3 text-sm text-steel">QUEM SABE O QUE QUER, RECONHECE A KALLAHARI.</div>
-+            <div class="rounded-xl border border-line bg-panel px-4 py-3 text-sm text-steel">O NOME PESA PORQUE A TRAJETÓRIA SUSTENTA.</div>
-+            <div class="rounded-xl border border-line bg-panel px-4 py-3 text-sm text-steel">VEM COM NÓS QUEM QUISER.</div>
-+          </div>
-+        </div>
-+      </section>
-+
-+      <!-- ========================= MANIFESTO ========================= -->
-+      <section class="py-20 md:py-24">
-+        <div class="mx-auto w-full max-w-7xl px-4 md:px-8">
-+          <p class="text-xs font-semibold uppercase tracking-micro text-neon">MANIFESTO</p>
-+          <div class="mt-5 rounded-2xl border border-line bg-panel p-7 shadow-panel md:p-10">
-+            <p class="max-w-4xl font-display text-3xl leading-tight text-white md:text-5xl">A presença certa não precisa se explicar. Ela entra, pesa e deixa claro que não veio para parecer comum.</p>
-+            <p class="mt-6 max-w-3xl text-zinc-300 md:text-lg">Kallahari Labs representa visão, código e identidade.</p>
-+            <p class="mt-8 text-sm font-bold uppercase tracking-elite text-neon">ISSO AQUI TEM ASSINATURA.</p>
-+          </div>
-+        </div>
-+      </section>
-+    </main>
-+
-+    <!-- ========================= FOOTER ========================= -->
-+    <footer id="footer" class="border-t border-line bg-baseSoft py-14 md:py-16">
-+      <div class="mx-auto w-full max-w-7xl px-4 md:px-8">
-+        <section class="rounded-2xl border border-line bg-panel p-6 shadow-panel md:p-8">
-+          <h2 class="font-display text-3xl text-white md:text-4xl">CANAIS OFICIAIS</h2>
-+          <p class="mt-3 max-w-3xl text-zinc-300">Entre do jeito certo. Atendimento e acesso pelos canais oficiais da Kallahari Labs.</p>
-+
-+          <div class="mt-8 grid gap-4 sm:grid-cols-2">
-+            <a
-+              data-link="telegramVip"
-+              href="https://t.me/seu_canal"
-+              target="_blank"
-+              rel="noopener noreferrer"
-+              class="flex min-h-14 items-center justify-center gap-3 rounded-xl border border-line bg-zinc-900 px-5 py-4 text-center text-sm font-bold tracking-wide text-white transition hover:border-neon hover:text-neon"
-+            >
-+              <i data-lucide="send" class="h-5 w-5"></i>
-+              CANAL VIP TELEGRAM
-+            </a>
-+
-+            <a
-+              data-link="whatsappConsultoria"
-+              href="https://wa.me/5500000000000?text=Quero%20consultoria%20com%20a%20Kallahari%20Labs"
-+              target="_blank"
-+              rel="noopener noreferrer"
-+              class="flex min-h-14 items-center justify-center gap-3 rounded-xl border border-neon/70 bg-neon px-5 py-4 text-center text-sm font-black tracking-wide text-black shadow-neonSoft transition hover:brightness-95"
-+            >
-+              <i data-lucide="message-circle" class="h-5 w-5"></i>
-+              CONSULTORIA WHATSAPP
-+            </a>
-+          </div>
-+
-+          <p class="mt-8 text-xs uppercase tracking-[0.16em] text-zinc-500">O próximo passo acontece no canal certo.</p>
-+          <img data-logo src="logo-kallahari-oficial.svg" alt="Logo oficial Kallahari Labs" class="mt-4 h-16 w-16 rounded-full object-cover ring-1 ring-[#c9ad7a]/50" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden')" />
-+          <span class="mt-4 hidden h-16 w-16 items-center justify-center rounded-full border border-[#c9ad7a]/50 text-sm font-bold tracking-[0.24em] text-[#c9ad7a]">KL</span>
-+          <p class="mt-4 text-sm uppercase tracking-elite text-white">KALLAHARI LABS<br />POSTURA. PRESENÇA. ASSINATURA.</p>
-+          <p class="mt-6 text-xs leading-relaxed text-zinc-500">Conteúdo institucional destinado ao público adulto. Informações e disponibilidade somente pelos canais oficiais da marca.</p>
-+        </section>
-+      </div>
-+    </footer>
-+
-+    <script>
-+      // JavaScript mínimo para aplicar links e imagem do bloco de configuração.
-+      (function () {
-+        const cfg = window.KALLAHARI_CONFIG || {};
-+
-+        document.querySelectorAll('[data-link]').forEach((el) => {
-+          const key = el.getAttribute('data-link');
-+          if (cfg[key]) el.setAttribute('href', cfg[key]);
-+        });
-+
-+        const hero = document.querySelector('[data-hero]');
-+        if (hero && cfg.heroImage) {
-+          hero.style.backgroundImage = `linear-gradient(108deg,rgba(5,5,5,.97) 14%,rgba(5,5,5,.72) 56%,rgba(5,5,5,.94) 100%), radial-gradient(circle at 78% 24%,rgba(212,255,0,.13),transparent 36%), url('${cfg.heroImage}')`;
-+        }
-+
-+        if (cfg.logoImage) {
-+          document.querySelectorAll('[data-logo]').forEach((el) => el.setAttribute('src', cfg.logoImage));
-+        }
-+
-+        lucide.createIcons();
-+      })();
-+    </script>
-+  </body>
-+</html>
- 
-EOF
-)
+<!doctype html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kallahari Labs | A Evolução Pura da Performance</title>
+    <meta
+      name="description"
+      content="Kallahari Labs: suplementação de elite e protocolos de alta performance. Atendimento exclusivo via WhatsApp e Canal VIP no Telegram."
+    />
+
+    <!-- Tailwind CSS via CDN (edicao manual facil no GitHub) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- CONFIGURACAO GLOBAL DA PAGINA (edite aqui com facilidade) -->
+    <script>
+      window.KALLAHARI_CONFIG = {
+        whatsappMain: 'https://wa.me/5500000000000?text=Quero%20consultar%20estoque%20Kallahari%20Labs',
+        whatsappConsultoria: 'https://wa.me/5500000000000?text=Quero%20consultoria%20estrategica%20Kallahari%20Labs',
+        telegramVip: 'https://t.me/seu_canal',
+        heroImage: 'https://images.unsplash.com/photo-1579758629938-03607ccdbaba?auto=format&fit=crop&w=2200&q=80',
+        heroHeadlineTop: 'A EVOLUÇÃO PURA',
+        heroHeadlineBottom: 'DA PERFORMANCE.',
+      };
+    </script>
+
+    <!-- Configuracao de tema Tailwind -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              base: '#050505',
+              baseSoft: '#0b0b0b',
+              panel: '#111214',
+              line: '#26282c',
+              textsoft: '#d8dbe2',
+              steel: '#b8becb',
+              steelDeep: '#8e95a3',
+              neon: '#D4FF00',
+            },
+            fontFamily: {
+              display: ['"Arial Black"', 'Impact', 'Haettenschweiler', 'sans-serif'],
+              body: ['Inter', 'system-ui', 'sans-serif'],
+            },
+            letterSpacing: {
+              elite: '0.12em',
+              doctrine: '0.20em',
+            },
+            boxShadow: {
+              panel: '0 20px 60px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255,255,255,0.06)',
+              neonSoft: '0 0 0 1px rgba(212,255,0,0.35), 0 0 20px rgba(212,255,0,0.16)',
+            },
+            backgroundImage: {
+              steel: 'linear-gradient(125deg, #f3f5fb 0%, #bcc2cf 45%, #7c8596 100%)',
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Lucide Icons via CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+
+  <body class="bg-base font-body text-textsoft antialiased selection:bg-neon selection:text-black">
+    <!-- =========================
+         HEADER FIXO
+         ========================= -->
+    <header class="fixed inset-x-0 top-0 z-50 border-b border-line/80 bg-base/85 backdrop-blur-xl">
+      <div class="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-4 md:px-8 md:py-5">
+        <a href="#home" class="inline-flex items-center gap-2.5" aria-label="Kallahari Labs">
+          <span class="h-2 w-2 rounded-full bg-neon shadow-neonSoft"></span>
+          <span class="font-display text-xl tracking-[0.14em] text-white sm:text-2xl">KALLAHARI LABS</span>
+        </a>
+
+        <nav class="hidden items-center gap-8 text-sm font-medium md:flex">
+          <a href="#doutrina" class="text-steel transition duration-300 hover:text-white">A Doutrina</a>
+          <a href="#produtos" class="text-steel transition duration-300 hover:text-white">Produtos</a>
+          <a
+            data-link="telegramVip"
+            href="https://t.me/seu_canal"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="rounded-full border border-line bg-panel px-4 py-2.5 text-white transition duration-300 hover:border-neon hover:text-neon"
+            >Canal VIP</a
+          >
+        </nav>
+
+        <!-- Menu mobile simples e funcional -->
+        <details class="group md:hidden">
+          <summary class="list-none rounded-md border border-line bg-panel p-2 text-steel">
+            <i data-lucide="menu" class="h-5 w-5"></i>
+          </summary>
+          <div class="absolute right-4 top-16 w-52 rounded-xl border border-line bg-baseSoft p-3 shadow-panel">
+            <a href="#doutrina" class="block rounded-md px-3 py-2 text-sm hover:bg-zinc-900">A Doutrina</a>
+            <a href="#produtos" class="mt-1 block rounded-md px-3 py-2 text-sm hover:bg-zinc-900">Produtos</a>
+            <a
+              data-link="telegramVip"
+              href="https://t.me/seu_canal"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mt-2 block rounded-md border border-line px-3 py-2 text-sm text-neon hover:border-neon"
+              >Canal VIP</a
+            >
+          </div>
+        </details>
+      </div>
+    </header>
+
+    <main>
+      <!-- =========================
+           HERO SECTION
+           - heroImage e headlines saem do bloco de configuracao
+           ========================= -->
+      <section
+        id="home"
+        class="relative flex min-h-screen items-center overflow-hidden"
+        data-hero
+        style="background-image: linear-gradient(115deg, rgba(5,5,5,0.96) 22%, rgba(5,5,5,0.68) 56%, rgba(5,5,5,0.96) 100%), radial-gradient(circle at 78% 18%, rgba(212,255,0,0.15), transparent 35%), url('https://images.unsplash.com/photo-1579758629938-03607ccdbaba?auto=format&fit=crop&w=2200&q=80'); background-position: center; background-size: cover;"
+      >
+        <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(to_bottom,rgba(255,255,255,0.03),transparent_15%,transparent_85%,rgba(255,255,255,0.02))]"></div>
+
+        <div class="mx-auto mt-24 w-full max-w-7xl px-4 py-20 md:mt-16 md:px-8 md:py-28">
+          <p class="inline-flex items-center gap-2 rounded-full border border-neon/35 bg-zinc-900/70 px-4 py-1.5 text-[10px] font-bold uppercase tracking-doctrine text-neon sm:text-xs">
+            <span class="h-1.5 w-1.5 rounded-full bg-neon"></span>
+            Elite Underground Protocol
+          </p>
+
+          <h1 class="mt-7 max-w-5xl font-display text-5xl leading-[0.9] text-white sm:text-6xl md:text-7xl lg:text-8xl">
+            <span data-text="heroHeadlineTop">A EVOLUÇÃO PURA</span><br />
+            <span data-text="heroHeadlineBottom" class="bg-steel bg-clip-text text-transparent">DA PERFORMANCE.</span>
+          </h1>
+
+          <p class="mt-8 max-w-2xl text-base leading-relaxed text-zinc-300 sm:text-lg">
+            Suplementação de elite para quem não aceita nível mediano. Protocolos de alta densidade para atletas que tratam resultado como obrigação.
+          </p>
+
+          <div class="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
+            <a
+              data-link="whatsappMain"
+              href="https://wa.me/5500000000000?text=Quero%20consultar%20estoque%20Kallahari%20Labs"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group inline-flex items-center justify-center gap-2 rounded-lg border border-neon/80 bg-neon px-8 py-4 text-sm font-black tracking-elite text-black shadow-neonSoft transition duration-300 hover:-translate-y-0.5 hover:brightness-95"
+            >
+              CONSULTAR ESTOQUE VIA WHATSAPP
+              <i data-lucide="arrow-up-right" class="h-4 w-4 transition group-hover:translate-x-0.5"></i>
+            </a>
+
+            <p class="text-xs uppercase tracking-[0.18em] text-zinc-400">Atendimento reservado · resposta prioritária</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+           A DOUTRINA
+           ========================= -->
+      <section id="doutrina" class="border-y border-line bg-baseSoft py-20 md:py-24">
+        <div class="mx-auto w-full max-w-7xl px-4 md:px-8">
+          <div class="grid gap-12 md:grid-cols-12">
+            <div class="md:col-span-4">
+              <p class="text-xs font-semibold uppercase tracking-doctrine text-neon">A Doutrina</p>
+              <h2 class="mt-4 font-display text-4xl leading-tight text-white md:text-5xl">Autoridade Técnica. Resultado Mensurável.</h2>
+            </div>
+
+            <div class="md:col-span-8">
+              <p class="text-lg leading-relaxed text-zinc-200 md:text-xl">
+                Não seguimos tendências, forjamos resultados. Na Kallahari Labs, cada composto é selecionado para o próximo nível genético.
+              </p>
+              <div class="mt-7 grid gap-3 sm:grid-cols-3">
+                <div class="rounded-lg border border-line bg-panel/70 px-4 py-3">
+                  <p class="text-[11px] uppercase tracking-[0.16em] text-steelDeep">Precisão</p>
+                </div>
+                <div class="rounded-lg border border-line bg-panel/70 px-4 py-3">
+                  <p class="text-[11px] uppercase tracking-[0.16em] text-steelDeep">Performance</p>
+                </div>
+                <div class="rounded-lg border border-line bg-panel/70 px-4 py-3">
+                  <p class="text-[11px] uppercase tracking-[0.16em] text-steelDeep">Exclusividade</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+           PRODUTOS
+           ========================= -->
+      <section id="produtos" class="py-20 md:py-24">
+        <div class="mx-auto w-full max-w-7xl px-4 md:px-8">
+          <div class="mb-10 md:mb-14">
+            <p class="text-xs font-semibold uppercase tracking-doctrine text-neon">Produtos</p>
+            <h2 class="mt-4 font-display text-4xl text-white md:text-5xl">Vitrine de Protocolo Premium</h2>
+          </div>
+
+          <div class="grid gap-6 md:grid-cols-3">
+            <!-- Card produto 1 -->
+            <article class="group relative overflow-hidden rounded-2xl border border-line bg-panel p-6 shadow-panel transition duration-300 hover:-translate-y-1 hover:border-steelDeep">
+              <div class="absolute right-0 top-0 h-24 w-24 rounded-bl-[46px] bg-[radial-gradient(circle,rgba(212,255,0,0.16),transparent_70%)]"></div>
+              <p class="text-[11px] uppercase tracking-[0.18em] text-steelDeep">Potência de treino</p>
+              <h3 class="mt-3 text-2xl font-bold text-white">Pré-treino Insano</h3>
+              <p class="mt-4 text-sm leading-relaxed text-zinc-300">Foco neural alto, explosão controlada e sustentação energética para sessões de intensidade máxima.</p>
+              <a
+                data-link="whatsappMain"
+                href="https://wa.me/5500000000000?text=Quero%20reservar%20Pre-Treino%20Insano"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mt-7 inline-flex items-center gap-2 rounded-md border border-neon/55 px-4 py-2.5 text-sm font-bold tracking-wide text-neon transition duration-300 hover:bg-neon hover:text-black"
+                >RESERVAR NO WHATSAPP <i data-lucide="arrow-up-right" class="h-4 w-4"></i
+              ></a>
+            </article>
+
+            <!-- Card produto 2 -->
+            <article class="group relative overflow-hidden rounded-2xl border border-line bg-panel p-6 shadow-panel transition duration-300 hover:-translate-y-1 hover:border-steelDeep">
+              <div class="absolute right-0 top-0 h-24 w-24 rounded-bl-[46px] bg-[radial-gradient(circle,rgba(212,255,0,0.16),transparent_70%)]"></div>
+              <p class="text-[11px] uppercase tracking-[0.18em] text-steelDeep">Construção magra</p>
+              <h3 class="mt-3 text-2xl font-bold text-white">Ciclo de Ganho Seco</h3>
+              <p class="mt-4 text-sm leading-relaxed text-zinc-300">Estrutura técnica para ganho consistente de massa com retenção reduzida e acabamento estético superior.</p>
+              <a
+                data-link="whatsappMain"
+                href="https://wa.me/5500000000000?text=Quero%20reservar%20Ciclo%20de%20Ganho%20Seco"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mt-7 inline-flex items-center gap-2 rounded-md border border-neon/55 px-4 py-2.5 text-sm font-bold tracking-wide text-neon transition duration-300 hover:bg-neon hover:text-black"
+                >RESERVAR NO WHATSAPP <i data-lucide="arrow-up-right" class="h-4 w-4"></i
+              ></a>
+            </article>
+
+            <!-- Card produto 3 -->
+            <article class="group relative overflow-hidden rounded-2xl border border-line bg-panel p-6 shadow-panel transition duration-300 hover:-translate-y-1 hover:border-steelDeep">
+              <div class="absolute right-0 top-0 h-24 w-24 rounded-bl-[46px] bg-[radial-gradient(circle,rgba(212,255,0,0.16),transparent_70%)]"></div>
+              <p class="text-[11px] uppercase tracking-[0.18em] text-steelDeep">Recuperação estratégica</p>
+              <h3 class="mt-3 text-2xl font-bold text-white">Recuperação Elite</h3>
+              <p class="mt-4 text-sm leading-relaxed text-zinc-300">Recuperação avançada para reduzir fadiga sistêmica e manter consistência de rendimento ao longo do ciclo.</p>
+              <a
+                data-link="whatsappMain"
+                href="https://wa.me/5500000000000?text=Quero%20reservar%20Recuperacao%20Elite"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mt-7 inline-flex items-center gap-2 rounded-md border border-neon/55 px-4 py-2.5 text-sm font-bold tracking-wide text-neon transition duration-300 hover:bg-neon hover:text-black"
+                >RESERVAR NO WHATSAPP <i data-lucide="arrow-up-right" class="h-4 w-4"></i
+              ></a>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =========================
+         FOOTER / CANAIS
+         ========================= -->
+    <footer class="border-t border-line bg-baseSoft py-14 md:py-16">
+      <div class="mx-auto w-full max-w-7xl px-4 md:px-8">
+        <section class="rounded-2xl border border-line bg-panel p-6 shadow-panel md:p-8" aria-label="Canais de venda">
+          <p class="text-xs uppercase tracking-doctrine text-neon">Canais Oficiais</p>
+          <h2 class="mt-3 max-w-3xl font-display text-3xl leading-tight text-white md:text-4xl">Fechamento de estoque e consultoria apenas por acesso direto.</h2>
+
+          <div class="mt-8 grid gap-4 sm:grid-cols-2">
+            <a
+              data-link="telegramVip"
+              href="https://t.me/seu_canal"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex min-h-14 items-center justify-center gap-3 rounded-xl border border-line bg-zinc-900 px-5 py-4 text-center text-sm font-bold tracking-wide text-white transition duration-300 hover:border-neon hover:text-neon"
+            >
+              <i data-lucide="send" class="h-5 w-5"></i>
+              CANAL VIP TELEGRAM
+            </a>
+
+            <a
+              data-link="whatsappConsultoria"
+              href="https://wa.me/5500000000000?text=Quero%20consultoria%20estrategica%20Kallahari%20Labs"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex min-h-14 items-center justify-center gap-3 rounded-xl border border-neon/70 bg-neon px-5 py-4 text-center text-sm font-black tracking-wide text-black shadow-neonSoft transition duration-300 hover:brightness-95"
+            >
+              <i data-lucide="message-circle" class="h-5 w-5"></i>
+              CONSULTORIA WHATSAPP
+            </a>
+          </div>
+
+          <p class="mt-8 text-xs leading-relaxed text-zinc-500">
+            Uso consciente e responsável. Conteúdo destinado a maiores de 19 anos. Recomendamos acompanhamento profissional para qualquer protocolo.
+          </p>
+        </section>
+      </div>
+    </footer>
+
+    <script>
+      // Aplica configuracoes de links, imagem e textos-chave.
+      (function () {
+        const cfg = window.KALLAHARI_CONFIG || {};
+
+        document.querySelectorAll('[data-link]').forEach((el) => {
+          const key = el.getAttribute('data-link');
+          if (cfg[key]) el.setAttribute('href', cfg[key]);
+        });
+
+        document.querySelectorAll('[data-text]').forEach((el) => {
+          const key = el.getAttribute('data-text');
+          if (cfg[key]) el.textContent = cfg[key];
+        });
+
+        const hero = document.querySelector('[data-hero]');
+        if (hero && cfg.heroImage) {
+          hero.style.backgroundImage = `linear-gradient(115deg, rgba(5,5,5,0.96) 22%, rgba(5,5,5,0.68) 56%, rgba(5,5,5,0.96) 100%), radial-gradient(circle at 78% 18%, rgba(212,255,0,0.15), transparent 35%), url('${cfg.heroImage}')`;
+        }
+
+        lucide.createIcons();
+      })();
+    </script>
+  </body>
+</html>
