@@ -1,10 +1,10 @@
  (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
 diff --git a/index.html b/index.html
 new file mode 100644
-index 0000000000000000000000000000000000000000..d53edb466b78e5a9072cb04a85ab6f60914d683a
+index 0000000000000000000000000000000000000000..7bd884708eab5fe4f34573c1920c2d7a09797c8e
 --- /dev/null
 +++ b/index.html
-@@ -0,0 +1,351 @@
+@@ -0,0 +1,353 @@
 +<!doctype html>
 +<html lang="pt-BR" class="scroll-smooth">
 +  <head>
@@ -82,7 +82,8 @@ index 0000000000000000000000000000000000000000..d53edb466b78e5a9072cb04a85ab6f60
 +    <header class="fixed inset-x-0 top-0 z-50 border-b border-line/80 bg-base/90 backdrop-blur-xl">
 +      <div class="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-4 md:px-8">
 +        <a href="#home" class="inline-flex items-center gap-3" aria-label="KALLAHARI LABS">
-+          <img data-logo src="logo-kallahari-oficial.svg" alt="Logo oficial Kallahari Labs" class="h-10 w-10 rounded-full object-cover ring-1 ring-[#c9ad7a]/50" />
++          <img data-logo src="logo-kallahari-oficial.svg" alt="Logo oficial Kallahari Labs" class="h-10 w-10 rounded-full object-cover ring-1 ring-[#c9ad7a]/50" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden')" />
++          <span class="hidden h-10 w-10 items-center justify-center rounded-full border border-[#c9ad7a]/50 text-xs font-bold tracking-[0.2em] text-[#c9ad7a]">KL</span>
 +          <span class="font-display text-xl tracking-[0.14em] text-white sm:text-2xl">KALLAHARI LABS</span>
 +        </a>
 +
@@ -158,7 +159,7 @@ index 0000000000000000000000000000000000000000..d53edb466b78e5a9072cb04a85ab6f60
 +            </a>
 +            <a
 +              data-link="whatsappMain"
-+              href="https://wa.me/5500000000000?text=Quero%20falar%20com%20a%20Kallahari%20Labs"
++              href="https://wa.me/5500000000000?text=Quero%20reservar%20na%20Kallahari%20Labs"
 +              target="_blank"
 +              rel="noopener noreferrer"
 +              class="inline-flex items-center justify-center gap-2 rounded-lg border border-line bg-panel px-7 py-4 text-sm font-bold tracking-wide text-white transition hover:border-neon hover:text-neon"
@@ -214,36 +215,36 @@ index 0000000000000000000000000000000000000000..d53edb466b78e5a9072cb04a85ab6f60
 +          <div class="mt-10 grid gap-6 md:grid-cols-3">
 +            <article class="rounded-2xl border border-line bg-panel p-6 shadow-panel transition hover:-translate-y-1 hover:border-steelDeep">
 +              <h3 class="text-2xl font-bold text-white">ANABOL DE ELITE</h3>
-+              <p class="mt-4 text-sm leading-relaxed text-zinc-300">Descrição institucional premium com foco em identidade, presença e assinatura da marca.</p>
++              <p class="mt-4 text-sm leading-relaxed text-zinc-300">Linha central da assinatura Kallahari. Presença forte, identidade premium e posicionamento para quem exige uma marca que fale antes da embalagem.</p>
 +              <a
-+                data-link="telegramVip"
-+                href="https://t.me/seu_canal"
++                data-link="whatsappMain"
++                href="https://wa.me/5500000000000?text=Quero%20reservar%20na%20Kallahari%20Labs"
 +                target="_blank"
 +                rel="noopener noreferrer"
 +                class="mt-7 inline-flex items-center gap-2 rounded-md border border-neon/55 px-4 py-2.5 text-sm font-bold tracking-wide text-neon transition hover:bg-neon hover:text-black"
-+                >ACESSAR VIA TELEGRAM <i data-lucide="arrow-up-right" class="h-4 w-4"></i
++                >RESERVAR NO WHATSAPP <i data-lucide="arrow-up-right" class="h-4 w-4"></i
 +              ></a>
 +            </article>
 +
 +            <article class="rounded-2xl border border-line bg-panel p-6 shadow-panel transition hover:-translate-y-1 hover:border-steelDeep">
 +              <h3 class="text-2xl font-bold text-white">PROTOCOLO DE GANHO SECO</h3>
-+              <p class="mt-4 text-sm leading-relaxed text-zinc-300">Comunicação institucional para rotina de alta exigência, disciplina e consistência de comunidade.</p>
++              <p class="mt-4 text-sm leading-relaxed text-zinc-300">Estrutura pensada para quem procura densidade, disciplina e uma comunicação alinhada ao universo da alta performance.</p>
 +              <a
-+                data-link="telegramVip"
-+                href="https://t.me/seu_canal"
++                data-link="whatsappMain"
++                href="https://wa.me/5500000000000?text=Quero%20reservar%20na%20Kallahari%20Labs"
 +                target="_blank"
 +                rel="noopener noreferrer"
 +                class="mt-7 inline-flex items-center gap-2 rounded-md border border-neon/55 px-4 py-2.5 text-sm font-bold tracking-wide text-neon transition hover:bg-neon hover:text-black"
-+                >ACESSAR VIA TELEGRAM <i data-lucide="arrow-up-right" class="h-4 w-4"></i
++                >RESERVAR NO WHATSAPP <i data-lucide="arrow-up-right" class="h-4 w-4"></i
 +              ></a>
 +            </article>
 +
 +            <article class="rounded-2xl border border-line bg-panel p-6 shadow-panel transition hover:-translate-y-1 hover:border-steelDeep">
 +              <h3 class="text-2xl font-bold text-white">RECUPERAÇÃO ELITE</h3>
-+              <p class="mt-4 text-sm leading-relaxed text-zinc-300">Linha institucional para quem valoriza constância, organização e leitura de rotina em alto nível.</p>
++              <p class="mt-4 text-sm leading-relaxed text-zinc-300">Uma linha voltada para quem entende que constância, leitura de rotina e presença caminham juntas no mais alto nível.</p>
 +              <a
 +                data-link="whatsappMain"
-+                href="https://wa.me/5500000000000?text=Quero%20falar%20com%20a%20Kallahari%20Labs"
++                href="https://wa.me/5500000000000?text=Quero%20reservar%20na%20Kallahari%20Labs"
 +                target="_blank"
 +                rel="noopener noreferrer"
 +                class="mt-7 inline-flex items-center gap-2 rounded-md border border-neon/55 px-4 py-2.5 text-sm font-bold tracking-wide text-neon transition hover:bg-neon hover:text-black"
@@ -325,7 +326,8 @@ index 0000000000000000000000000000000000000000..d53edb466b78e5a9072cb04a85ab6f60
 +          </div>
 +
 +          <p class="mt-8 text-xs uppercase tracking-[0.16em] text-zinc-500">O próximo passo acontece no canal certo.</p>
-+          <img data-logo src="logo-kallahari-oficial.svg" alt="Logo oficial Kallahari Labs" class="mt-4 h-16 w-16 rounded-full object-cover ring-1 ring-[#c9ad7a]/50" />
++          <img data-logo src="logo-kallahari-oficial.svg" alt="Logo oficial Kallahari Labs" class="mt-4 h-16 w-16 rounded-full object-cover ring-1 ring-[#c9ad7a]/50" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden')" />
++          <span class="mt-4 hidden h-16 w-16 items-center justify-center rounded-full border border-[#c9ad7a]/50 text-sm font-bold tracking-[0.24em] text-[#c9ad7a]">KL</span>
 +          <p class="mt-4 text-sm uppercase tracking-elite text-white">KALLAHARI LABS<br />POSTURA. PRESENÇA. ASSINATURA.</p>
 +          <p class="mt-6 text-xs leading-relaxed text-zinc-500">Conteúdo institucional destinado ao público adulto. Informações e disponibilidade somente pelos canais oficiais da marca.</p>
 +        </section>
