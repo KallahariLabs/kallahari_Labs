@@ -3,13 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kallahari Labs | Confiança, Procedência e Presença</title>
+    <title>Kallahari Labs | Confiança, Presença e Garantia</title>
     <meta
       name="description"
-      content="Kallahari Labs: procedência, autenticidade, operação consolidada e atendimento direto pelos canais oficiais."
+      content="Kallahari Labs: confiança, procedência, autenticidade e atendimento direto pelos canais oficiais."
     />
 
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Montserrat:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
     <script>
       window.KALLAHARI_CONFIG = {
@@ -32,14 +39,17 @@
               steel: "#b8becb",
               steelDeep: "#8e95a3",
               neon: "#D4FF00",
+              gold: "#d8a85a",
             },
             fontFamily: {
               display: ['"Arial Black"', "Impact", "Haettenschweiler", "sans-serif"],
+              brand: ['Montserrat', "Inter", "system-ui", "sans-serif"],
               body: ["Inter", "system-ui", "sans-serif"],
             },
             letterSpacing: {
               elite: "0.12em",
               doctrine: "0.20em",
+              brandwide: "0.18em",
             },
             boxShadow: {
               panel: "0 20px 60px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255,255,255,0.06)",
@@ -63,11 +73,9 @@
     <header class="fixed inset-x-0 top-0 z-50 border-b border-line/80 bg-base/85 backdrop-blur-xl">
       <div class="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-4 md:px-8 md:py-5">
         <a href="#home" class="inline-flex items-center" aria-label="Kallahari Labs">
-          <img
-            src="./logomarca.png"
-            alt="Kallahari Labs"
-            class="h-14 w-auto object-contain sm:h-16 md:h-20"
-          />
+          <span class="font-brand text-lg font-bold uppercase tracking-brandwide text-white sm:text-xl md:text-2xl">
+            KALLAHARI LABS
+          </span>
         </a>
 
         <nav class="hidden items-center gap-8 text-sm font-medium md:flex">
@@ -115,7 +123,7 @@
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,255,0,0.08),transparent_42%)]"></div>
         <div class="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(255,255,255,0.03),transparent_15%,transparent_85%,rgba(255,255,255,0.02))]"></div>
 
-        <div class="relative mx-auto mt-28 grid w-full max-w-7xl items-center gap-10 px-4 py-20 md:mt-20 md:grid-cols-2 md:px-8 md:py-28">
+        <div class="relative mx-auto mt-28 grid w-full max-w-7xl items-center gap-10 px-4 py-20 md:mt-20 md:grid-cols-[1.05fr_0.95fr] md:px-8 md:py-28">
           <div class="order-2 md:order-1">
             <p class="inline-flex items-center gap-2 rounded-full border border-neon/35 bg-zinc-900/70 px-4 py-1.5 text-[10px] font-bold uppercase tracking-doctrine text-neon sm:text-xs">
               <span class="h-1.5 w-1.5 rounded-full bg-neon"></span>
@@ -124,7 +132,8 @@
 
             <h1 class="mt-7 max-w-5xl font-display text-5xl leading-[0.9] text-white sm:text-6xl md:text-7xl lg:text-8xl">
               <span>CONFIANÇA,</span><br />
-              <span class="bg-steel bg-clip-text text-transparent">PRESENÇA E GARANTIA.</span>
+              <span>PRESENÇA,</span><br />
+              <span class="bg-steel bg-clip-text text-transparent">GARANTIA.</span>
             </h1>
 
             <p class="mt-8 max-w-2xl text-base leading-relaxed text-zinc-300 sm:text-lg">
@@ -307,7 +316,7 @@
     <footer id="canais" class="border-t border-line bg-baseSoft py-14 md:py-16">
       <div class="mx-auto w-full max-w-7xl px-4 md:px-8">
         <section class="rounded-2xl border border-line bg-panel p-6 shadow-panel md:p-8" aria-label="Canais de atendimento">
-          <div class="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
+          <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
             <div>
               <p class="text-xs uppercase tracking-doctrine text-neon">Canais Oficiais</p>
               <h2 class="mt-3 max-w-3xl font-display text-3xl leading-tight text-white md:text-4xl">
@@ -318,7 +327,7 @@
             <img
               src="./logomarca.png"
               alt="Kallahari Labs"
-              class="h-12 w-auto object-contain opacity-90 sm:h-14"
+              class="h-24 w-auto object-contain opacity-95 sm:h-28 md:h-32"
             />
           </div>
 
